@@ -124,7 +124,10 @@ public class ModuleAvaritia implements IModule {
 			infinity.addItem("ingotInfinity", 1, Material.VALUE_Nugget * 2);
 			infinity.addItem("blockInfinity", 1, Material.VALUE_Ingot * 2);
 			infinity.setRepresentativeItem(new ItemStack(Util.getItem("avaritia", "resource"), 1, 6));
-			infinity.setCraftable(true);
+			infinity.setFluid((Fluid)infinityFluid);
+			infinity.setCraftable(false).setCastable(true);
+			TinkerRegistry.registerAlloy(new FluidStack((Fluid)infinityFluid, 3), new FluidStack[] { new FluidStack((Fluid)TinkerFluids.ingotInfinity, 1) });
+			(new MaterialIntegration(infinity, (Fluid)infinityFluid, "Infinity")).toolforge().integrate();
 		}
 		modInfinity.addItem(new ItemStack(Util.getItem("avaritia", "resource"), 1, 5), 1, 1);
 	}
