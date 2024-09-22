@@ -2,6 +2,7 @@ package com.rcx.materialis.modules;
 
 import com.rcx.materialis.MaterialisConfig;
 import com.rcx.materialis.Util;
+import com.rcx.materialis.resources.FluidCustom;
 import com.rcx.materialis.modifiers.ModInfinity;
 import com.rcx.materialis.traits.MaterialisTraits;
 import com.rcx.materialis.traits.TraitCosmic;
@@ -14,17 +15,24 @@ import c4.conarm.lib.materials.TrimMaterialStats;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.RegistryEvent.Register;
+import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import slimeknights.tconstruct.library.MaterialIntegration;
 import slimeknights.tconstruct.library.TinkerRegistry;
+import slimeknights.tconstruct.library.fluid.FluidMolten;
 import slimeknights.tconstruct.library.materials.BowMaterialStats;
 import slimeknights.tconstruct.library.materials.ExtraMaterialStats;
 import slimeknights.tconstruct.library.materials.HandleMaterialStats;
 import slimeknights.tconstruct.library.materials.HeadMaterialStats;
 import slimeknights.tconstruct.library.materials.Material;
 import slimeknights.tconstruct.library.modifiers.Modifier;
+import slimeknights.tconstruct.library.traits.ITrait;
+import slimeknights.tconstruct.shared.TinkerFluids;
+import slimeknights.tconstruct.tools.TinkerTraits;
 
 public class ModuleAvaritia implements IModule {
 
